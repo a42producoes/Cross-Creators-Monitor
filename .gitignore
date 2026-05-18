@@ -1,0 +1,20 @@
+# Banco de dados local (não publicar)
+data.db
+data.db-journal
+data.db-wal
+data.db-shm
+
+# Logs e arquivos temporários
+collect.log
+__pycache__/
+*.pyc
+
+# Config com API keys e webhook — não publicar
+config.json
+
+# Dashboard local (só o /site/index.html vai pro Pages)
+dashboard.html
+
+# Reports e digests sensíveis
+reports/
+digests/
