@@ -2,7 +2,7 @@
 // Strategy: network-first com fallback pra cache. Garante dados frescos quando online
 // e funciona offline (último snapshot em cache) quando sem rede.
 
-const CACHE_NAME = "ccm-v1";
+const CACHE_NAME = "ccm-v2";
 const CORE_ASSETS = [
   "/",
   "/index.html",
