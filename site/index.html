@@ -58,6 +58,8 @@ async function doLogin(e) {
   const ph = await sha256(p);
   const match = TENANTS.find(t => t.user_hash === uh && t.pw_hash === ph);
   if (!match) { err.textContent = "Usuário ou senha incorretos."; return; }
+  // Pré-marca a sessão do tenant correto pra o dashboard destrancar automaticamente
+  sessionStorage.setItem("cwm_authed_" + match.id, "1");
   window.location = "./" + match.id + "/";
 }
 </script>
