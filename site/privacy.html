@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Cross Creators Monitor</title>
+<style>
+  :root { --bg:#0b0f14; --panel:#141a23; --text:#dde4ec; --muted:#7c8a9a; --line:#222a36; --accent:#60a5fa; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding:32px 18px; }
+  .container { max-width:780px; margin:0 auto; }
+  h1 { color:var(--text); font-size:28px; margin:0 0 6px; }
+  h2 { color:var(--text); font-size:18px; margin:28px 0 10px; padding-top:14px; border-top:1px solid var(--line); }
+  .lead { color:var(--muted); margin-bottom:24px; font-size:14px; }
+  .lang-switch { display:flex; gap:10px; margin-bottom:20px; font-size:13px; }
+  .lang-switch a { color:var(--accent); text-decoration:none; padding:4px 12px; border:1px solid var(--line); border-radius:6px; }
+  .lang-switch a.active { background:var(--accent); color:#0b0f14; border-color:var(--accent); }
+  p { margin:8px 0 14px; }
+  ul { padding-left:22px; }
+  li { margin:4px 0; }
+  code { background:#0e141c; padding:1px 6px; border-radius:3px; font-size:13px; color:#a8d4ff; }
+  .meta { color:var(--muted); font-size:12px; margin-top:28px; padding-top:14px; border-top:1px solid var(--line); }
+  a { color:var(--accent); }
+  .lang { display:none; }
+  .lang.active { display:block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="lang-switch">
+    <a href="#pt" id="btn-pt" class="active" onclick="setLang('pt'); return false;">🇧🇷 Português</a>
+    <a href="#en" id="btn-en" onclick="setLang('en'); return false;">🇺🇸 English</a>
+  </div>
+
+  <!-- ============ PORTUGUÊS ============ -->
+  <div class="lang active" id="lang-pt">
+    <h1>Política de Privacidade</h1>
+    <div class="lead">Cross Creators Monitor — Última atualização: 20 de maio de 2026</div>
+
+    <h2>1. Sobre esta aplicação</h2>
+    <p>O <strong>Cross Creators Monitor</strong> (doravante "aplicação") é uma ferramenta independente de pesquisa que analisa métricas públicas de canais participantes do programa de recompensas Cross Wave (operado por NEXUS Co., Ltd.). A aplicação não é afiliada, endossada ou operada pela Cross Wave ou pela NEXUS.</p>
+
+    <h2>2. Dados coletados</h2>
+    <p>A aplicação coleta exclusivamente <strong>dados públicos</strong> através das seguintes APIs oficiais:</p>
+    <ul>
+      <li><strong>YouTube Data API v3</strong>: estatísticas públicas de canais (subscribers, total views, video count) e de vídeos (views, likes, comments count, título, descrição, data de publicação). Nenhum dado privado, autenticação OAuth ou conteúdo gerado por usuário é acessado.</li>
+      <li><strong>Cross Wave API</strong> (<code>wave-client-api.crosstoken.io</code>): rankings públicos de campanhas, recompensas distribuídas, perfis públicos de criadores. Mesma API utilizada pelo dashboard oficial.</li>
+    </ul>
+    <p>Os dados coletados são armazenados localmente em banco de dados SQLite para análise temporal.</p>
+
+    <h2>3. Acesso ao dashboard</h2>
+    <p>O dashboard é de acesso restrito, protegido por autenticação. Quando um usuário autorizado faz login, a aplicação registra:</p>
+    <ul>
+      <li>Data e hora do acesso</li>
+      <li>Endereço IP aproximado (via <a href="https://ipapi.co" target="_blank">ipapi.co</a>) — usado apenas para localização geral (cidade/país)</li>
+      <li>User agent do navegador</li>
+      <li>Resolução de tela</li>
+    </ul>
+    <p>Esses registros são enviados via webhook do Discord ao operador da aplicação, com finalidade de transparência (saber quem acessou e quando). Não são compartilhados com terceiros nem usados para perfilamento.</p>
+
+    <h2>4. Compartilhamento e venda de dados</h2>
+    <p>A aplicação <strong>não vende, aluga ou compartilha dados</strong> com terceiros. Os dados públicos coletados via APIs permanecem agregados internamente para análise e visualização.</p>
+
+    <h2>5. Análise via IA (Google Gemini)</h2>
+    <p>A aplicação utiliza o modelo Gemini (Google AI) para gerar resumos analíticos textuais ("dossiês") e classificar amostras de comentários públicos. Apenas dados públicos já coletados são enviados ao Gemini. Nenhuma informação pessoal identificável de usuários do dashboard é processada pela IA.</p>
+
+    <h2>6. Cookies e armazenamento local</h2>
+    <p>A aplicação utiliza <code>localStorage</code> do navegador apenas para:</p>
+    <ul>
+      <li>Preferência de idioma (PT/EN)</li>
+      <li>Estado de sessão de login (não persiste credenciais)</li>
+      <li>Registro de primeiro acesso (carimbo de data/hora)</li>
+    </ul>
+    <p>Nenhum cookie de rastreamento de terceiros é utilizado.</p>
+
+    <h2>7. Direitos dos titulares de dados</h2>
+    <p>Os canais analisados pela aplicação são públicos no YouTube e os dados utilizados são igualmente públicos. Caso um operador de canal deseje solicitar remoção do conjunto de canais monitorados ou apresentar contraprova sobre uma classificação, pode entrar em contato pelos meios listados abaixo.</p>
+
+    <h2>8. Conformidade com termos de terceiros</h2>
+    <p>A aplicação opera em conformidade com:</p>
+    <ul>
+      <li><a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" target="_blank">YouTube API Services Terms of Service</a></li>
+      <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+      <li>Termos de uso da Cross Wave (consulta a endpoints públicos sem autenticação)</li>
+    </ul>
+
+    <h2>9. Contato</h2>
+    <p>Para questões sobre privacidade, dados ou contestações de análise:</p>
+    <ul>
+      <li>Canal YouTube do operador: <a href="https://www.youtube.com/channel/UC-c3UhXJ2iXB4MdyEQ_T7_g" target="_blank">Antena 42</a></li>
+      <li>Cross Wave profile: <a href="https://wave.crosstoken.io/pt-BR/profile/" target="_blank">Antena 42 na Cross Wave</a></li>
+    </ul>
+
+    <h2>10. Alterações nesta política</h2>
+    <p>Esta política pode ser atualizada conforme a aplicação evolui. A data da última atualização está sempre no topo. Mudanças materiais serão comunicadas no próprio dashboard.</p>
+
+    <div class="meta">Cross Creators Monitor · Documento público · Sem coleta de dados pessoais de terceiros</div>
+  </div>
+
+  <!-- ============ ENGLISH ============ -->
+  <div class="lang" id="lang-en">
+    <h1>Privacy Policy</h1>
+    <div class="lead">Cross Creators Monitor — Last updated: May 20, 2026</div>
+
+    <h2>1. About this application</h2>
+    <p>The <strong>Cross Creators Monitor</strong> (the "application") is an independent research tool that analyzes public metrics of channels participating in the Cross Wave creator rewards program (operated by NEXUS Co., Ltd.). The application is not affiliated with, endorsed by, or operated by Cross Wave or NEXUS.</p>
+
+    <h2>2. Data collected</h2>
+    <p>The application collects only <strong>public data</strong> through the following official APIs:</p>
+    <ul>
+      <li><strong>YouTube Data API v3</strong>: public channel statistics (subscribers, total views, video count) and video statistics (views, likes, comment count, title, description, publish date). No private data, OAuth authentication, or user-generated content is accessed.</li>
+      <li><strong>Cross Wave API</strong> (<code>wave-client-api.crosstoken.io</code>): public campaign rankings, distributed rewards, public creator profiles. The same API used by the official dashboard.</li>
+    </ul>
+    <p>Collected data is stored locally in a SQLite database for temporal analysis.</p>
+
+    <h2>3. Dashboard access</h2>
+    <p>The dashboard is access-restricted, protected by authentication. When an authorized user logs in, the application records:</p>
+    <ul>
+      <li>Date and time of access</li>
+      <li>Approximate IP address (via <a href="https://ipapi.co" target="_blank">ipapi.co</a>) — used only for general location (city/country)</li>
+      <li>Browser user agent</li>
+      <li>Screen resolution</li>
+    </ul>
+    <p>These records are sent via Discord webhook to the application operator for transparency purposes (knowing who accessed and when). They are not shared with third parties or used for profiling.</p>
+
+    <h2>4. Data sharing and sale</h2>
+    <p>The application <strong>does not sell, rent, or share data</strong> with third parties. Public data collected via APIs is kept internally aggregated for analysis and visualization.</p>
+
+    <h2>5. AI analysis (Google Gemini)</h2>
+    <p>The application uses the Gemini model (Google AI) to generate textual analytical summaries ("dossiers") and classify samples of public comments. Only already-collected public data is sent to Gemini. No personally identifiable information about dashboard users is processed by the AI.</p>
+
+    <h2>6. Cookies and local storage</h2>
+    <p>The application uses browser <code>localStorage</code> only for:</p>
+    <ul>
+      <li>Language preference (PT/EN)</li>
+      <li>Login session state (does not persist credentials)</li>
+      <li>First-access timestamp</li>
+    </ul>
+    <p>No third-party tracking cookies are used.</p>
+
+    <h2>7. Data subject rights</h2>
+    <p>Channels analyzed by the application are public on YouTube, and the data used is similarly public. If a channel operator wishes to request removal from the monitored set or submit counter-evidence regarding a classification, they can contact the operator via the channels listed below.</p>
+
+    <h2>8. Compliance with third-party terms</h2>
+    <p>The application operates in compliance with:</p>
+    <ul>
+      <li><a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" target="_blank">YouTube API Services Terms of Service</a></li>
+      <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+      <li>Cross Wave terms of use (public endpoint queries without authentication)</li>
+    </ul>
+
+    <h2>9. Contact</h2>
+    <p>For privacy questions, data inquiries, or classification disputes:</p>
+    <ul>
+      <li>Operator's YouTube channel: <a href="https://www.youtube.com/channel/UC-c3UhXJ2iXB4MdyEQ_T7_g" target="_blank">Antena 42</a></li>
+      <li>Cross Wave profile: <a href="https://wave.crosstoken.io/pt-BR/profile/" target="_blank">Antena 42 on Cross Wave</a></li>
+    </ul>
+
+    <h2>10. Changes to this policy</h2>
+    <p>This policy may be updated as the application evolves. The last update date is always shown at the top. Material changes will be communicated within the dashboard itself.</p>
+
+    <div class="meta">Cross Creators Monitor · Public document · No third-party personal data collection</div>
+  </div>
+</div>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
+    history.replaceState(null, '', '#' + lang);
+  }
+  // Auto-select on load
+  const initial = (location.hash || '#pt').slice(1);
+  if (initial === 'en') setLang('en');
+  else {
+    // Detect from browser
+    const nav = (navigator.language||'').toLowerCase();
+    if (!nav.startsWith('pt')) setLang('en');
+  }
+</script>
+</body>
+</html>
