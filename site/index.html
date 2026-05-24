@@ -60,7 +60,7 @@ async function doLogin(e) {
   if (!match) { err.textContent = "Usuário ou senha incorretos."; return; }
   // Pré-marca a sessão do tenant correto pra o dashboard destrancar automaticamente
   sessionStorage.setItem("cwm_authed_" + match.id, "1");
-  window.location = "./" + match.id + "/";
+  window.location = "./" + match.id + "/index.html";
 }
 </script>
 </body>
